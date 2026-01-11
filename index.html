@@ -8,6 +8,145 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for enhanced animations */
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid #667eea;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea; }
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .glow {
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.5),
+                         0 0 20px rgba(102, 126, 234, 0.3),
+                         0 0 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .model-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .model-actions .btn-primary,
+        .model-actions .btn-secondary {
+            padding: 10px;
+            font-size: 0.9rem;
+            flex: 1;
+            text-align: center;
+        }
+
+        .stats-counter {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .mouse {
+            width: 30px;
+            height: 50px;
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .mouse::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: #667eea;
+            border-radius: 2px;
+            animation: scroll 1.5s infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Subscription Modal -->
@@ -15,13 +154,15 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="modal-body">
-                <i class="fas fa-bell modal-icon"></i>
+                <i class="fas fa-bell modal-icon pulse"></i>
                 <h2>Subscribe to Max Crafter!</h2>
                 <p>Get notified about new Roblox models, tutorials, and updates first!</p>
-                <a href="https://youtube.com/@max-yt2025" target="_blank" class="subscribe-btn">
+                <a href="https://youtube.com/@max-yt2025" target="_blank" class="subscribe-btn pulse">
                     <i class="fab fa-youtube"></i> Subscribe on YouTube
                 </a>
-                <button id="remindLater" class="secondary-btn">Remind Me Later</button>
+                <button id="remindLater" class="secondary-btn">
+                    <i class="far fa-clock"></i> Remind Me Later
+                </button>
                 <label class="checkbox-container">
                     <input type="checkbox" id="dontShowAgain">
                     <span class="checkmark"></span>
@@ -49,7 +190,7 @@
             
             <div class="nav-actions">
                 <a href="store.html" class="btn-primary">
-                    <i class="fas fa-shopping-cart"></i> Get Models
+                    <i class="fas fa-shopping-cart"></i> Browse Models
                 </a>
             </div>
             
@@ -63,20 +204,41 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title animate-pop">
-                Premium <span class="gradient-text">Roblox Models</span>
+                Premium <span class="gradient-text typing-text">Roblox Models</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle glow">
                 High-quality, customizable models for your Roblox games. Free to use!
             </p>
+            
+            <div class="stats-counter">
+                <div class="stat-box">
+                    <div class="stat-number" data-count="1250">0</div>
+                    <div class="stat-label">Downloads</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-count="4.9">0</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-label">Free Models</div>
+                </div>
+            </div>
+            
             <div class="hero-buttons">
-                <a href="store.html" class="btn-hero">
+                <a href="store.html" class="btn-hero pulse">
                     <i class="fas fa-rocket"></i> Explore Models
                 </a>
                 <a href="#featured" class="btn-hero-secondary">
-                    <i class="fas fa-star"></i> Featured
+                    <i class="fas fa-star"></i> Featured Model
                 </a>
             </div>
         </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+        
         <div class="hero-background">
             <div class="floating-shapes">
                 <div class="shape shape-1"></div>
@@ -96,24 +258,29 @@
                 <div class="featured-image">
                     <div class="model-preview animate-float">
                         <i class="fas fa-comments model-icon"></i>
+                        <div class="live-badge">LIVE PREVIEW</div>
                     </div>
                 </div>
                 <div class="featured-content">
-                    <span class="featured-badge">NEW</span>
-                    <h3>Custom Chat System</h3>
+                    <span class="featured-badge pulse">🔥 MOST POPULAR</span>
+                    <h3>Ungroup Custom Chat System</h3>
                     <p>A fully customizable chat system for Roblox games with modern UI, emotes support, and admin commands.</p>
                     <ul class="feature-list">
                         <li><i class="fas fa-check"></i> Fully customizable UI</li>
                         <li><i class="fas fa-check"></i> Emotes & Badges support</li>
                         <li><i class="fas fa-check"></i> Admin command system</li>
                         <li><i class="fas fa-check"></i> Mobile responsive</li>
+                        <li><i class="fas fa-check"></i> User roles & permissions</li>
+                        <li><i class="fas fa-check"></i> Low latency performance</li>
                     </ul>
                     <div class="featured-actions">
-                        <a href="store/custom-chat.html" class="btn-primary">
-                            <i class="fas fa-download"></i> Get Free Model
+                        <a href="https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat" 
+                           target="_blank" 
+                           class="btn-primary pulse">
+                            <i class="fas fa-external-link-alt"></i> Get on Roblox
                         </a>
-                        <a href="store.html" class="btn-secondary">
-                            View All Models
+                        <a href="store/custom-chat.html" class="btn-secondary">
+                            <i class="fas fa-info-circle"></i> View Details
                         </a>
                     </div>
                 </div>
@@ -130,29 +297,106 @@
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Optimized</h3>
-                    <p>Highly optimized for performance with low lag impact</p>
+                    <h3>Optimized Performance</h3>
+                    <p>Highly optimized for performance with low lag impact and smooth gameplay</p>
                 </div>
                 <div class="feature-card animate-slide-up" style="animation-delay: 0.1s;">
                     <div class="feature-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Customizable</h3>
-                    <p>Easy to customize and adapt to your game's theme</p>
+                    <h3>Fully Customizable</h3>
+                    <p>Easy to customize and adapt to your game's theme and style</p>
                 </div>
                 <div class="feature-card animate-slide-up" style="animation-delay: 0.2s;">
                     <div class="feature-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Clean Code</h3>
-                    <p>Well-documented and clean Lua code included</p>
+                    <p>Well-documented and clean Lua code with comments included</p>
                 </div>
                 <div class="feature-card animate-slide-up" style="animation-delay: 0.3s;">
                     <div class="feature-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Support</h3>
-                    <p>Get help from our community and tutorials</p>
+                    <h3>Full Support</h3>
+                    <p>Get help from our community, tutorials, and support team</p>
+                </div>
+                <div class="feature-card animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Ready</h3>
+                    <p>All models are tested and optimized for mobile devices</p>
+                </div>
+                <div class="feature-card animate-slide-up" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Regular Updates</h3>
+                    <p>Models receive regular updates and bug fixes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube CTA -->
+    <section class="section youtube-cta">
+        <div class="container">
+            <div class="cta-content" style="background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);">
+                <div class="cta-text">
+                    <h2 style="color: white;">Watch Tutorials on YouTube</h2>
+                    <p style="color: rgba(255,255,255,0.9);">Learn how to use our models with step-by-step tutorials</p>
+                </div>
+                <a href="https://youtube.com/@max-yt2025" target="_blank" class="btn-hero" style="background: white; color: #FF0000;">
+                    <i class="fab fa-youtube"></i> Subscribe Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Developers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The Custom Chat System saved me weeks of development time. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50/667eea/ffffff?text=JD" alt="Developer">
+                        <div>
+                            <h4>John Developer</h4>
+                            <span>Game Creator</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Clean code and excellent documentation. Made integration so easy!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50/764ba2/ffffff?text=SR" alt="Developer">
+                        <div>
+                            <h4>Sarah Roblox</h4>
+                            <span>Studio Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Best free models I've found. The support is amazing too!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/50/ed8936/ffffff?text=MG" alt="Developer">
+                        <div>
+                            <h4>Mike Gamer</h4>
+                            <span>Indie Developer</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,7 +432,7 @@
                     <a href="store.html">Store</a>
                     <a href="contact.html">Contact</a>
                     <a href="tos.html">Terms of Service</a>
-                    <a href="policy.html">Privacy Policy</a>
+                    <a href="pricety.html">Privacy Policy</a>
                 </div>
                 <div class="footer-links">
                     <h4>Resources</h4>
@@ -216,5 +460,109 @@
 
     <script src="script.js"></script>
     <script src="subscription-modal.js"></script>
+    
+    <style>
+        .live-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .youtube-cta .cta-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            border-radius: var(--radius);
+            margin-top: 40px;
+        }
+        
+        .cta-text {
+            flex: 1;
+        }
+        
+        .cta-text h2 {
+            margin-bottom: 10px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .testimonial-content {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-content i {
+            font-size: 2rem;
+            color: #667eea;
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author h4 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author span {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .youtube-cta .cta-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .stats-counter {
+                gap: 20px;
+            }
+            
+            .stat-box {
+                min-width: 120px;
+            }
+        }
+    </style>
 </body>
 </html>
