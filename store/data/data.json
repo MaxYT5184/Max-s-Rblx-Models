@@ -2,21 +2,24 @@
   "models": [
     {
       "id": "custom-chat",
-      "name": "Custom Chat System",
-      "description": "A fully customizable chat system with modern UI, Filter Bypass, and more coming soon!",
+      "name": "Ungroup Custom Chat System",
+      "description": "A modern, fully customizable chat system for Roblox games with emotes support and admin commands",
       "category": "ui",
       "price": "free",
-      "downloads": 1829,
-      "rating": 4.7,
-      "tags": ["ui", "chat", "modern", "optimized"],
+      "downloads": 1250,
+      "rating": 4.9,
+      "tags": ["ui", "chat", "modern", "optimized", "mobile"],
       "features": [
         "Customizable UI",
         "Emotes Support",
         "Admin Commands",
-        "Mobile Responsive"
+        "Mobile Responsive",
+        "User Roles",
+        "Low Latency"
       ],
-      "previewImage": "https://via.placeholder.com/400x250/667eea/ffffff?text=Chat+Preview",
-      "page": "store/custom-chat.html"
+      "robloxUrl": "https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat",
+      "page": "store/custom-chat.html",
+      "youtubeTutorial": "https://youtube.com/@max-yt2025"
     }
   ]
 }
