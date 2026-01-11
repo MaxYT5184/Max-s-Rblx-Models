@@ -1,0 +1,22 @@
+{
+  "models": [
+    {
+      "id": "custom-chat",
+      "name": "Custom Chat System",
+      "description": "A fully customizable chat system with modern UI, Filter Bypass, and more coming soon!",
+      "category": "ui",
+      "price": "free",
+      "downloads": 1829,
+      "rating": 4.7,
+      "tags": ["ui", "chat", "modern", "optimized"],
+      "features": [
+        "Customizable UI",
+        "Emotes Support",
+        "Admin Commands",
+        "Mobile Responsive"
+      ],
+      "previewImage": "https://via.placeholder.com/400x250/667eea/ffffff?text=Chat+Preview",
+      "page": "store/custom-chat.html"
+    }
+  ]
+}
