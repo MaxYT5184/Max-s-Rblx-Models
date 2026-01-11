@@ -2,7 +2,7 @@
   "models": [
     {
       "id": "custom-chat",
-      "name": "Ungroup Custom Chat System",
+      "name": "Custom Chat System",
       "description": "A modern, fully customizable chat system for Roblox games with emotes support and admin commands",
       "category": "ui",
       "price": "free",
@@ -19,6 +19,28 @@
       ],
       "robloxUrl": "https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat",
       "page": "store/custom-chat.html",
+      "youtubeTutorial": "https://youtube.com/@max-yt2025"
+    },
+        {
+      "id": "puremostly-anticheat",
+      "name": "PureMostly AntiCheat",
+      "description": "A modern, fully customizable best top 1 free anti cheat for Roblox games with auto logs, admin commands and more",
+      "category": "tools",
+      "price": "free",
+      "downloads": 50,
+      "rating": 5.0,
+      "tags": ["ui", "chat", "modern", "optimized", "mobile", "anticheat"],
+      "features": [
+        "Admin Commands",
+        "Logs Viewers",
+        "Mobile Responsive",
+        "User Roles",
+        "Low Latency",
+        "Ban Land",
+        "Discord Webhook"
+      ],
+      "robloxUrl": "https://create.roblox.com/store/asset/135425152790547/PureMostly-AntiCheat",
+      "page": "store/puremostlyanticheat.html",
       "youtubeTutorial": "https://youtube.com/@max-yt2025"
     }
   ]
