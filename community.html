@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community & Team | Max's Rblx Models</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        .community-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .community-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .community-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .team-card-header {
+            padding: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #f6f9ff 0%, #f0f4ff 100%);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+        
+        .team-name {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .team-bio {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .team-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .team-social a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .comments-section {
+            background: #f8fafc;
+            padding: 80px 0;
+            margin: 80px 0;
+        }
+        
+        .comment-form {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .comments-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .comment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .comment-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .comment-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .comment-user {
+            flex: 1;
+        }
+        
+        .comment-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .comment-time {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        .comment-rating {
+            color: #fbbf24;
+        }
+        
+        .comment-content {
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        
+        .comment-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .comment-likes {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #718096;
+        }
+        
+        .like-btn {
+            background: none;
+            border: none;
+            color: #718096;
+            cursor: pointer;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .like-btn:hover {
+            color: #f56565;
+        }
+        
+        .like-btn.liked {
+            color: #f56565;
+        }
+        
+        .reply-btn {
+            background: none;
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .discord-cta {
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(135deg, #5865F2 0%, #404EED 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 80px auto;
+            max-width: 800px;
+        }
+        
+        .discord-cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .discord-cta p {
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            color: #5865F2;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .discord-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .community-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .comment-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Max's Rblx Models</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="store.html" class="nav-link"><i class="fas fa-store"></i> Store</a>
+                <a href="community.html" class="nav-link active"><i class="fas fa-users"></i> Community</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="tos.html" class="nav-link"><i class="fas fa-file-contract"></i> ToS</a>
+                <a href="pricety.html" class="nav-link"><i class="fas fa-shield-alt"></i> Privacy</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="store.html" class="btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Browse Models
+                </a>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Community Hero -->
+    <section class="community-hero">
+        <div class="container">
+            <h1>Join Our Community</h1>
+            <p>Connect with other developers, get support, and share your creations</p>
+            <a href="#discord" class="btn-hero">
+                <i class="fab fa-discord"></i> Join Discord
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>The passionate developers behind Max's Rblx Models</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Max&backgroundColor=667eea" alt="Max" class="team-avatar">
+                        <h3 class="team-name">Max Crafter</h3>
+                        <div class="team-role">Founder & Lead Developer</div>
+                        <p class="team-bio">Creator of popular Roblox models with 5+ years of experience in game development.</p>
+                        <div class="team-social">
+                            <a href="https://youtube.com/@max-yt2025" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Alex&backgroundColor=764ba2" alt="Alex" class="team-avatar">
+                        <h3 class="team-name">Alex Coder</h3>
+                        <div class="team-role">UI/UX Designer</div>
+                        <p class="team-bio">Specializes in creating beautiful and user-friendly interfaces for Roblox games.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-card-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sara&backgroundColor=ed8936" alt="Sara" class="team-avatar">
+                        <h3 class="team-name">Sara Script</h3>
+                        <div class="team-role">Lua Developer</div>
+                        <p class="team-bio">Expert in optimized Lua code and creating efficient game systems.</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-dev"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord CTA -->
+    <section id="discord" class="discord-cta">
+        <div class="container">
+            <h2>Join Our Discord Community</h2>
+            <p>Connect with 1,000+ developers, get instant support, share your creations, and be the first to know about new models!</p>
+            <a href="#" class="discord-btn">
+                <i class="fab fa-discord"></i> Join Discord Server
+            </a>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Community Feedback</h2>
+                <p>See what other developers are saying about our models</p>
+            </div>
+            
+            <!-- Comment Form -->
+            <div class="comment-form">
+                <h3>Share Your Experience</h3>
+                <form id="commentForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="commentName">Name</label>
+                            <input type="text" id="commentName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commentEmail">Email (optional)</label>
+                            <input type="email" id="commentEmail" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentRating">Rating</label>
+                        <div class="rating-input">
+                            <div class="stars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                            <input type="hidden" id="commentRating" value="5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="commentText">Your Comment</label>
+                        <textarea id="commentText" rows="4" placeholder="Share your thoughts about our models..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Post Comment
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Comments List -->
+            <div class="comments-list">
+                <!-- Comment 1 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=RobloxDev123&backgroundColor=667eea" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <div class="comment-name">RobloxDev123</div>
+                            <div class="comment-time">2 days ago</div>
+                        </div>
+                        <div class="comment-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        The Ungroup Custom Chat System is absolutely amazing! Saved me so much time and the documentation was super clear. The support team helped me with customization within minutes. Highly recommended!
+                    </div>
+                    <div class="comment-meta">
+                        <div class="comment-likes">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <span class="like-count">42 likes</span>
+                        </div>
+                        <button class="reply-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Comment 2 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=GameCreator&backgroundColor=764ba2" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <div class="comment-name">GameCreator</div>
+                            <div class="comment-time">1 week ago</div>
+                        </div>
+                        <div class="comment-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        Been using the inventory system for my tycoon game. Works perfectly and the drag & drop feature is smooth. Only suggestion would be more tutorial videos for advanced customization.
+                    </div>
+                    <div class="comment-meta">
+                        <div class="comment-likes">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <span class="like-count">28 likes</span>
+                        </div>
+                        <button class="reply-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Comment 3 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=DevPro&backgroundColor=ed8936" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <div class="comment-name">DevPro</div>
+                            <div class="comment-time">2 weeks ago</div>
+                        </div>
+                        <div class="comment-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        The vehicle physics system is incredible! Works great with my racing game. The community on Discord is very helpful too. Looking forward to more models from this team!
+                    </div>
+                    <div class="comment-meta">
+                        <div class="comment-likes">
+                            <button class="like-btn liked"><i class="fas fa-heart"></i></button>
+                            <span class="like-count">56 likes</span>
+                        </div>
+                        <button class="reply-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Comment 4 -->
+                <div class="comment-card">
+                    <div class="comment-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=NewBuilder&backgroundColor=48bb78" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <div class="comment-name">NewBuilder</div>
+                            <div class="comment-time">3 weeks ago</div>
+                        </div>
+                        <div class="comment-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        As a beginner, I was worried about using pre-made models. But Max's tutorials on YouTube made everything so easy! The chat system works perfectly in my first game. Thank you!
+                    </div>
+                    <div class="comment-meta">
+                        <div class="comment-likes">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <span class="like-count">31 likes</span>
+                        </div>
+                        <button class="reply-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Max's Rblx Models</span>
+                    </a>
+                    <p>Creating amazing Roblox models for developers worldwide</p>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@max-yt2025" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="store.html">Store</a>
+                    <a href="community.html">Community</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="tos.html">Terms of Service</a>
+                    <a href="pricety.html">Privacy Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="https://youtube.com/@max-yt2025" target="_blank">Tutorials</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get notified about new models</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Max's Rblx Models. All rights reserved. Roblox is a trademark of Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Star Rating System
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.stars i');
+            const ratingInput = document.getElementById('commentRating');
+            
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const rating = this.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-rating') <= rating) {
+                            s.classList.remove('far');
+                            s.classList.add('fas');
+                        } else {
+                            s.classList.remove('fas');
+                            s.classList.add('far');
+                        }
+                    });
+                });
+                
+                star.addEventListener('mouseover', function() {
+                    const rating = this.getAttribute('data-rating');
+                    
+                    stars.forEach(s => {
+                        if (s.getAttribute('data-rating') <= rating) {
+                            s.classList.add('hover');
+                        } else {
+                            s.classList.remove('hover');
+                        }
+                    });
+                });
+            });
+            
+            // Like buttons
+            document.querySelectorAll('.like-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const likeCount = this.nextElementSibling;
+                    let count = parseInt(likeCount.textContent);
+                    
+                    if (this.classList.contains('liked')) {
+                        this.classList.remove('liked');
+                        this.innerHTML = '<i class="far fa-heart"></i>';
+                        count--;
+                    } else {
+                        this.classList.add('liked');
+                        this.innerHTML = '<i class="fas fa-heart"></i>';
+                        count++;
+                    }
+                    
+                    likeCount.textContent = count + ' likes';
+                });
+            });
+            
+            // Comment form submission
+            document.getElementById('commentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('commentName').value;
+                const rating = document.getElementById('commentRating').value;
+                const text = document.getElementById('commentText').value;
+                
+                // Create new comment
+                const newComment = document.createElement('div');
+                newComment.className = 'comment-card';
+                newComment.innerHTML = `
+                    <div class="comment-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(name)}&backgroundColor=667eea" alt="User" class="comment-avatar">
+                        <div class="comment-user">
+                            <div class="comment-name">${name}</div>
+                            <div class="comment-time">Just now</div>
+                        </div>
+                        <div class="comment-rating">
+                            ${'<i class="fas fa-star"></i>'.repeat(rating)}
+                            ${'<i class="far fa-star"></i>'.repeat(5-rating)}
+                        </div>
+                    </div>
+                    <div class="comment-content">
+                        ${text}
+                    </div>
+                    <div class="comment-meta">
+                        <div class="comment-likes">
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                            <span class="like-count">0 likes</span>
+                        </div>
+                        <button class="reply-btn">
+                            <i class="fas fa-reply"></i> Reply
+                        </button>
+                    </div>
+                `;
+                
+                // Add to top of comments list
+                const commentsList = document.querySelector('.comments-list');
+                commentsList.insertBefore(newComment, commentsList.firstChild);
+                
+                // Add like functionality to new comment
+                newComment.querySelector('.like-btn').addEventListener('click', function() {
+                    const likeCount = this.nextElementSibling;
+                    let count = parseInt(likeCount.textContent);
+                    
+                    if (this.classList.contains('liked')) {
+                        this.classList.remove('liked');
+                        this.innerHTML = '<i class="far fa-heart"></i>';
+                        count--;
+                    } else {
+                        this.classList.add('liked');
+                        this.innerHTML = '<i class="fas fa-heart"></i>';
+                        count++;
+                    }
+                    
+                    likeCount.textContent = count + ' likes';
+                });
+                
+                // Reset form
+                this.reset();
+                
+                // Reset stars
+                stars.forEach(s => {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                });
+                ratingInput.value = '5';
+                
+                // Show success message
+                alert('Thank you for your comment!');
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
