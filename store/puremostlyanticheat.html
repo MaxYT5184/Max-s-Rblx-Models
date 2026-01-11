@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureMostly AntiCheat | Max's Rblx Models</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        .model-detail {
+            padding: 100px 0 60px;
+        }
+        
+        .model-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .model-badge {
+            background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(245, 101, 101, 0.3);
+            animation: pulse-red 2s infinite;
+        }
+        
+        @keyframes pulse-red {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(245, 101, 101, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(245, 101, 101, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(245, 101, 101, 0.3); }
+        }
+        
+        .model-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f56565 0%, #ed8936 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .model-subtitle {
+            font-size: 1.3rem;
+            color: #718096;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+        
+        .model-preview-large {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #f56565;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .model-preview-large i {
+            font-size: 120px;
+            color: #f56565;
+            opacity: 0.9;
+            text-shadow: 0 0 30px rgba(245, 101, 101, 0.5);
+        }
+        
+        .model-stats {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 150px;
+            border: 2px solid #fed7d7;
+            transition: transform 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: #f56565;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #f56565;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #718096;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            border-color: #f56565;
+            box-shadow: 0 15px 40px rgba(245, 101, 101, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.8rem;
+            color: #f56565;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .feature-item h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #2d3748;
+            font-size: 1.4rem;
+        }
+        
+        .feature-item p {
+            text-align: center;
+            color: #718096;
+            line-height: 1.6;
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 70px 0;
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-radius: 20px;
+            margin: 80px 0;
+            border: 3px solid #f56565;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .btn-large {
+            padding: 20px 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #f56565 0%, #c53030 100%);
+            color: white;
+            border: none;
+        }
+        
+        .btn-danger:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(245, 101, 101, 0.4);
+        }
+        
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .content-section h2 {
+            margin: 50px 0 25px;
+            color: #2d3748;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #f56565, #ed8936);
+            border-radius: 2px;
+        }
+        
+        .content-section p {
+            margin-bottom: 25px;
+            line-height: 1.8;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+        
+        .content-section ul, .content-section ol {
+            margin: 20px 0 30px 25px;
+            color: #4a5568;
+        }
+        
+        .content-section li {
+            margin: 12px 0;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .content-section li strong {
+            color: #f56565;
+        }
+        
+        .model-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            justify-content: center;
+        }
+        
+        .model-tag {
+            padding: 10px 20px;
+            background: #fed7d7;
+            color: #c53030;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid #f56565;
+        }
+        
+        .roblox-preview {
+            margin: 60px 0;
+            text-align: center;
+        }
+        
+        .roblox-frame {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            border: 3px solid #f56565;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border: 3px solid #f56565;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .warning-box h3 {
+            color: #c53030;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .warning-box p {
+            color: #742a2a;
+            margin-bottom: 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th {
+            background: linear-gradient(135deg, #f56565 0%, #ed8936 100%);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:hover {
+            background: #fff5f5;
+        }
+        
+        .check {
+            color: #48bb78;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #f56565;
+            font-weight: bold;
+        }
+        
+        .youtube-embed {
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .youtube-frame {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .model-title {
+                font-size: 2.5rem;
+            }
+            
+            .model-stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: 120px;
+                padding: 15px 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-large {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .roblox-frame,
+            .youtube-frame {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Max's Rblx Models</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="../store.html" class="nav-link"><i class="fas fa-store"></i> Store</a>
+                <a href="../community.html" class="nav-link"><i class="fas fa-users"></i> Community</a>
+                <a href="../contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../tos.html" class="nav-link"><i class="fas fa-file-contract"></i> ToS</a>
+                <a href="../pricety.html" class="nav-link"><i class="fas fa-shield-alt"></i> Privacy</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="../store.html" class="btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Store
+                </a>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="model-detail">
+        <div class="container">
+            <div class="model-header">
+                <span class="model-badge">🔥 TOP 1 ANTICHEAT</span>
+                <h1 class="model-title">PureMostly AntiCheat</h1>
+                <p class="model-subtitle">A modern, fully customizable #1 free anti-cheat system for Roblox games with auto logs, admin commands, Discord integration, and advanced security features</p>
+            </div>
+            
+            <div class="model-preview-large animate-float">
+                <i class="fas fa-shield-alt"></i>
+                <div class="live-badge" style="background: linear-gradient(135deg, #f56565 0%, #c53030 100%);">SECURITY SYSTEM</div>
+            </div>
+            
+            <div class="model-stats">
+                <div class="stat-item">
+                    <div class="stat-value">5.0</div>
+                    <div class="stat-label">Perfect Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Active Installs</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Free</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Protection</div>
+                </div>
+            </div>
+            
+            <!-- Roblox Asset Preview -->
+            <div class="roblox-preview">
+                <h2>Live Preview on Roblox</h2>
+                <iframe 
+                    class="roblox-frame"
+                    src="https://create.roblox.com/store/asset/135425152790547/PureMostly-AntiCheat"
+                    title="PureMostly AntiCheat on Roblox"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <p class="text-small">View the anti-cheat system directly on Roblox Creator Marketplace</p>
+            </div>
+            
+            <div class="content-section">
+                <h2>Why Choose PureMostly AntiCheat?</h2>
+                <p>PureMostly AntiCheat is the #1 free anti-cheat solution for Roblox games, designed to protect your game from exploiters, hackers, and unfair players. With advanced detection algorithms and real-time monitoring, keep your game secure and fair for all players.</p>
+                
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Secure Your Game Today</h3>
+                    <p>Don't let exploiters ruin your game's experience. Protect your hard work with the most advanced free anti-cheat system available.</p>
+                </div>
+                
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Advanced Detection</h3>
+                        <p>Detects speed hacks, fly hacks, teleports, and other common exploits with 99% accuracy</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>Admin Commands</h3>
+                        <p>Complete admin system with kick, ban, warn, and temporary suspension commands</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <h3>Auto Logs System</h3>
+                        <p>Automatically logs all suspicious activities with timestamps and player data</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Discord Webhook</h3>
+                        <p>Get real-time alerts in your Discord server when exploits are detected</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tag"></i>
+                        </div>
+                        <h3>User Roles System</h3>
+                        <p>Assign different permission levels to moderators, admins, and owners</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3>Ban Land System</h3>
+                        <p>Send cheaters to a separate "ban land" server instead of immediate kicking</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Optimized</h3>
+                        <p>Works perfectly on all devices including mobile and tablets</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Low Latency</h3>
+                        <p>Optimized performance with minimal impact on game performance</p>
+                    </div>
+                </div>
+                
+                <h2>Feature Comparison</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>PureMostly AntiCheat</th>
+                            <th>Other Free Anti-Cheats</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Admin Commands</strong></td>
+                            <td class="check">✅ Complete System</td>
+                            <td class="cross">❌ Limited Commands</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auto Logs</strong></td>
+                            <td class="check">✅ Real-time Logging</td>
+                            <td class="cross">❌ Manual Logging</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Discord Integration</strong></td>
+                            <td class="check">✅ Webhook Support</td>
+                            <td class="cross">❌ No Integration</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ban Land System</strong></td>
+                            <td class="check">✅ Advanced System</td>
+                            <td class="cross">❌ Basic Kicking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile Support</strong></td>
+                            <td class="check">✅ Fully Optimized</td>
+                            <td class="check">✅ Usually Supported</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Price</strong></td>
+                            <td class="check">✅ 100% Free</td>
+                            <td class="check">✅ Usually Free</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>How to Install</h2>
+                <ol>
+                    <li><strong>Download:</strong> Click the "Get on Roblox" button below to open the model page</li>
+                    <li><strong>Insert:</strong> Click "Get" on the Roblox Creator Marketplace and insert into your game</li>
+                    <li><strong>Configure:</strong> Open the configuration module and set up your preferences</li>
+                    <li><strong>Set Permissions:</strong> Assign admin roles to trusted players</li>
+                    <li><strong>Connect Discord:</strong> Add your Discord webhook URL for real-time alerts</li>
+                    <li><strong>Test:</strong> Test the system with various scenarios</li>
+                    <li><strong>Deploy:</strong> Your game is now protected!</li>
+                </ol>
+                
+                <h2>System Requirements</h2>
+                <ul>
+                    <li><strong>Roblox Studio:</strong> Latest version required</li>
+                    <li><strong>Basic Knowledge:</strong> Understanding of Roblox Studio basics</li>
+                    <li><strong>Discord Server:</strong> For webhook integration (optional)</li>
+                    <li><strong>Storage:</strong> Minimal space required</li>
+                </ul>
+                
+                <!-- YouTube Tutorial -->
+                <div class="youtube-embed">
+                    <h2>Watch Tutorial</h2>
+                    <p>Learn how to set up and configure PureMostly AntiCheat with our step-by-step tutorial</p>
+                    <iframe 
+                        class="youtube-frame"
+                        src="https://www.youtube.com/embed/?list=UU@max-yt2025"
+                        title="PureMostly AntiCheat Tutorial"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <p class="text-small">Subscribe to <a href="https://youtube.com/@max-yt2025" target="_blank">Max Crafter</a> for more tutorials</p>
+                </div>
+                
+                <div class="download-section">
+                    <h2 style="color: #c53030; margin-bottom: 10px;">Get PureMostly AntiCheat Now</h2>
+                    <p style="color: #742a2a; font-size: 1.2rem; margin-bottom: 30px;">Protect your Roblox game with the #1 free anti-cheat system</p>
+                    
+                    <a href="https://create.roblox.com/store/asset/135425152790547/PureMostly-AntiCheat" 
+                       target="_blank" 
+                       class="btn-large btn-danger">
+                        <i class="fas fa-shield-alt"></i> Get on Roblox
+                    </a>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="https://create.roblox.com/store/asset/135425152790547/PureMostly-AntiCheat" 
+                           target="_blank"
+                           class="btn-secondary">
+                            <i class="fas fa-eye"></i> View on Marketplace
+                        </a>
+                        <a href="https://youtube.com/@max-yt2025" 
+                           target="_blank"
+                           class="btn-primary" style="margin-left: 10px;">
+                            <i class="fab fa-youtube"></i> Watch Tutorial
+                        </a>
+                    </div>
+                    
+                    <p class="text-small" style="margin-top: 25px; color: #742a2a;">By using this model, you agree to our <a href="../tos.html" style="color: #c53030;">Terms of Service</a></p>
+                </div>
+                
+                <h2>Support & Updates</h2>
+                <p>Need help setting up the anti-cheat system? We've got you covered:</p>
+                <ul>
+                    <li><a href="https://youtube.com/@max-yt2025" target="_blank"><strong>YouTube Tutorials:</strong> Step-by-step setup guides</a></li>
+                    <li><a href="../community.html"><strong>Community:</strong> Get help from other developers</a></li>
+                    <li><a href="../contact.html"><strong>Contact Support:</strong> Direct help from our team</a></li>
+                    <li><strong>Regular Updates:</strong> We constantly improve detection methods</li>
+                </ul>
+                
+                <div class="model-tags">
+                    <span class="model-tag">AntiCheat</span>
+                    <span class="model-tag">Security</span>
+                    <span class="model-tag">Free</span>
+                    <span class="model-tag">#1 Ranked</span>
+                    <span class="model-tag">Discord</span>
+                    <span class="model-tag">Admin System</span>
+                    <span class="model-tag">Logs</span>
+                    <span class="model-tag">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Max's Rblx Models</span>
+                    </a>
+                    <p>Creating amazing Roblox models for developers worldwide</p>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@max-yt2025" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="../store.html">Store</a>
+                    <a href="../community.html">Community</a>
+                    <a href="../contact.html">Contact</a>
+                    <a href="../tos.html">Terms of Service</a>
+                    <a href="../pricety.html">Privacy Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="https://youtube.com/@max-yt2025" target="_blank">Tutorials</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get notified about new security models</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Max's Rblx Models. All rights reserved. Roblox is a trademark of Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Additional animations for this page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add pulse animation to stats
+            const stats = document.querySelectorAll('.stat-item');
+            stats.forEach((stat, index) => {
+                stat.style.animationDelay = `${index * 0.2}s`;
+            });
+            
+            // Add security warning animation
+            const warningBox = document.querySelector('.warning-box');
+            if (warningBox) {
+                setInterval(() => {
+                    warningBox.style.transform = warningBox.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+                }, 2000);
+            }
+            
+            // Add feature cards animation
+            const features = document.querySelectorAll('.feature-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            features.forEach(feature => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                feature.style.transition = 'all 0.5s ease';
+                observer.observe(feature);
+            });
+        });
+    </script>
+</body>
+</html>
