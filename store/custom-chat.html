@@ -52,16 +52,28 @@
             gap: 30px;
             justify-content: center;
             margin: 30px 0;
+            flex-wrap: wrap;
         }
         
         .stat-item {
             text-align: center;
+            padding: 15px 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 120px;
         }
         
         .stat-value {
             font-size: 2em;
             font-weight: 700;
             color: #667eea;
+        }
+        
+        .stat-label {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 5px;
         }
         
         .features-grid {
@@ -83,12 +95,67 @@
             transform: translateY(-5px);
         }
         
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
         .download-section {
             text-align: center;
             padding: 60px 0;
             background: linear-gradient(135deg, #f6f9ff 0%, #f0f4ff 100%);
             border-radius: 20px;
             margin: 60px 0;
+        }
+        
+        .btn-large {
+            padding: 18px 50px;
+            font-size: 1.2rem;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section h2 {
+            margin: 40px 0 20px;
+            color: #2d3748;
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .content-section ol {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .content-section li {
+            margin: 10px 0;
+        }
+        
+        .roblox-preview {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .roblox-frame {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .text-small {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -124,7 +191,7 @@
         <div class="container">
             <div class="model-header">
                 <span class="model-badge">FEATURED MODEL</span>
-                <h1>Custom Chat System</h1>
+                <h1>Ungroup Custom Chat System</h1>
                 <p class="hero-subtitle">A modern, fully customizable chat system for Roblox games</p>
             </div>
             
@@ -145,52 +212,117 @@
                     <div class="stat-value">Free</div>
                     <div class="stat-label">Price</div>
                 </div>
+                <div class="stat-item">
+                    <div class="stat-value">UI</div>
+                    <div class="stat-label">Category</div>
+                </div>
+            </div>
+            
+            <!-- Roblox Asset Preview -->
+            <div class="roblox-preview">
+                <h2>Live Preview</h2>
+                <iframe 
+                    class="roblox-frame"
+                    src="https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat"
+                    title="Ungroup Custom Chat on Roblox"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <p class="text-small">View the model directly on Roblox Creator Marketplace</p>
             </div>
             
             <div class="content-section">
                 <h2>About This Model</h2>
-                <p>The Custom Chat System is a complete solution for adding chat functionality to your Roblox games. It features a modern, clean interface that's fully customizable to match your game's theme.</p>
+                <p>The Ungroup Custom Chat System is a complete solution for adding advanced chat functionality to your Roblox games. It features a modern, clean interface that's fully customizable to match your game's theme.</p>
                 
-                <h2>Features</h2>
+                <p>This system includes everything you need for a professional chat experience, including user roles, emotes, admin commands, and a responsive design that works on all devices.</p>
+                
+                <h2>Key Features</h2>
                 <div class="features-grid">
                     <div class="feature-item">
                         <i class="fas fa-palette feature-icon"></i>
-                        <h3>Customizable UI</h3>
-                        <p>Easily change colors, fonts, and layout to match your game</p>
+                        <h3>Fully Customizable</h3>
+                        <p>Easily change colors, fonts, and layout to match your game's theme</p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-smile feature-icon"></i>
                         <h3>Emotes & Badges</h3>
-                        <p>Support for custom emotes and player badges</p>
+                        <p>Support for custom emotes and player badges with visual indicators</p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-terminal feature-icon"></i>
                         <h3>Admin Commands</h3>
-                        <p>Built-in admin command system with permissions</p>
+                        <p>Built-in admin command system with customizable permissions</p>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-mobile-alt feature-icon"></i>
                         <h3>Mobile Optimized</h3>
-                        <p>Fully responsive design for mobile devices</p>
+                        <p>Fully responsive design that works perfectly on mobile devices</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users feature-icon"></i>
+                        <h3>User Roles</h3>
+                        <p>Support for different user roles with distinct name colors</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bolt feature-icon"></i>
+                        <h3>Optimized Performance</h3>
+                        <p>Low latency and efficient code for smooth gameplay</p>
                     </div>
                 </div>
                 
                 <h2>How to Use</h2>
                 <ol>
-                    <li>Download the model file</li>
-                    <li>Insert into your Roblox game</li>
+                    <li>Click the "Get on Roblox" button below to open the model page</li>
+                    <li>Click "Get" on the Roblox Creator Marketplace</li>
+                    <li>Insert the model into your Roblox game</li>
                     <li>Configure settings in the configuration module</li>
-                    <li>Customize the UI to match your game</li>
-                    <li>Test and publish!</li>
+                    <li>Customize the UI to match your game's theme</li>
+                    <li>Test the chat system and publish your game!</li>
                 </ol>
                 
+                <h2>Requirements</h2>
+                <ul>
+                    <li>Roblox Studio (latest version)</li>
+                    <li>Basic knowledge of Roblox Studio</li>
+                    <li>No scripting knowledge required for basic setup</li>
+                </ul>
+                
                 <div class="download-section">
-                    <h2>Ready to Download?</h2>
-                    <p>This model is completely free to use in your Roblox games.</p>
-                    <a href="#" class="btn-primary btn-large">
-                        <i class="fas fa-download"></i> Download Now (Free)
+                    <h2>Get This Model</h2>
+                    <p>This model is completely free to use in your Roblox games. Click below to get it directly from Roblox.</p>
+                    
+                    <a href="https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat" 
+                       target="_blank" 
+                       class="btn-primary btn-large">
+                        <i class="fas fa-external-link-alt"></i> Get on Roblox
                     </a>
-                    <p class="text-small">By downloading, you agree to our <a href="../tos.html">Terms of Service</a></p>
+                    
+                    <div style="margin-top: 20px;">
+                        <a href="https://create.roblox.com/store/asset/115286146601731/Ungroup-Custom-Chat" 
+                           target="_blank"
+                           class="btn-secondary">
+                            <i class="fas fa-eye"></i> View on Marketplace
+                        </a>
+                    </div>
+                    
+                    <p class="text-small">By using this model, you agree to our <a href="../tos.html">Terms of Service</a></p>
+                </div>
+                
+                <h2>Support & Updates</h2>
+                <p>Need help setting up the chat system? Check out our:</p>
+                <ul>
+                    <li><a href="https://youtube.com/@max-yt2025" target="_blank">YouTube tutorials</a></li>
+                    <li><a href="../contact.html">Contact form</a> for support</li>
+                    <li><a href="#">Documentation</a> (coming soon)</li>
+                </ul>
+                
+                <div class="model-tags">
+                    <span class="filter-tag">Chat System</span>
+                    <span class="filter-tag">UI</span>
+                    <span class="filter-tag">Free</span>
+                    <span class="filter-tag">Optimized</span>
+                    <span class="filter-tag">Mobile</span>
                 </div>
             </div>
         </div>
