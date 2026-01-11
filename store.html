@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's Rblx Models | Store</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation with Search -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Max's Rblx Models</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="store.html" class="nav-link active"><i class="fas fa-store"></i> Store</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="tos.html" class="nav-link"><i class="fas fa-file-contract"></i> ToS</a>
+                <a href="pricety.html" class="nav-link"><i class="fas fa-shield-alt"></i> Privacy</a>
+            </div>
+            
+            <div class="nav-search">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Search models...">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn-primary" id="filterToggle">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Store Header -->
+    <section class="store-header">
+        <div class="container">
+            <h1 class="store-title">Model Store</h1>
+            <p class="store-subtitle">Browse and download free Roblox models for your games</p>
+            
+            <div class="filter-section" id="filterSection">
+                <div class="filter-options">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="ui">UI Systems</option>
+                        <option value="gameplay">Gameplay</option>
+                        <option value="tools">Tools</option>
+                        <option value="environment">Environment</option>
+                    </select>
+                    
+                    <select id="sortFilter" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="name">Name A-Z</option>
+                    </select>
+                    
+                    <div class="filter-tags">
+                        <span class="filter-tag active">All</span>
+                        <span class="filter-tag">Free</span>
+                        <span class="filter-tag">Featured</span>
+                        <span class="filter-tag">Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="section models-section">
+        <div class="container">
+            <div class="models-grid" id="modelsGrid">
+                <!-- Models will be loaded from JSON -->
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading models...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Want a Custom Model?</h2>
+                <p>Need a specific model for your game? Contact us for custom development!</p>
+                <a href="contact.html" class="btn-primary">
+                    <i class="fas fa-magic"></i> Request Custom Model
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Max's Rblx Models</span>
+                    </a>
+                    <p>Creating amazing Roblox models for developers worldwide</p>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@max-yt2025" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="store.html">Store</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="tos.html">Terms of Service</a>
+                    <a href="pricety.html">Privacy Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get notified about new models</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Max's Rblx Models. All rights reserved. Roblox is a trademark of Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="store-search.js"></script>
+</body>
+</html>
