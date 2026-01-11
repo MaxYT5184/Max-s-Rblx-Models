@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Max's Rblx Models</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        .privacy-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .privacy-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .privacy-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .privacy-content {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        
+        .privacy-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .privacy-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4299e1;
+        }
+        
+        .privacy-section h3 {
+            color: #4a5568;
+            margin: 25px 0 15px;
+        }
+        
+        .privacy-section p {
+            line-height: 1.7;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+        
+        .privacy-section li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .data-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .security-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .contact-box {
+            background: #faf5ff;
+            border-left: 4px solid #9f7aea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .cookie-table th,
+        .cookie-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .cookie-table th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .cookie-table tr:hover {
+            background: #f7fafc;
+        }
+        
+        .cookie-type {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .cookie-necessary {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .cookie-analytics {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+        
+        .cookie-functional {
+            background: #feebc8;
+            color: #744210;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #718096;
+            font-style: italic;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .cookie-text {
+            flex: 1;
+        }
+        
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .privacy-section {
+                padding: 20px;
+            }
+            
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-table {
+                font-size: 0.9rem;
+            }
+            
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i>
+                <span>Max's Rblx Models</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="store.html" class="nav-link"><i class="fas fa-store"></i> Store</a>
+                <a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a>
+                <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="tos.html" class="nav-link"><i class="fas fa-file-contract"></i> ToS</a>
+                <a href="pricety.html" class="nav-link active"><i class="fas fa-shield-alt"></i> Privacy</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="store.html" class="btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Browse Models
+                </a>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Privacy Hero -->
+    <section class="privacy-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we protect your information.</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <div class="privacy-content">
+        <div class="privacy-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to Max's Rblx Models. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy policy, or our practices with regards to your personal information, please contact us.</p>
+            
+            <p>This Privacy Policy governs the privacy policies and practices of our Website, located at <a href="index.html">maxrblxmodels.com</a>. Please read our Privacy Policy carefully as it will help you make informed decisions about sharing your personal information with us.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>2. Information We Collect</h2>
+            
+            <div class="data-box">
+                <p><strong>Personal Information:</strong> We collect personal information that you voluntarily provide to us when expressing an interest in obtaining information about us or our products and services, when participating in activities on the Website, or otherwise contacting us.</p>
+            </div>
+            
+            <h3>2.1 Information You Provide</h3>
+            <p>We collect personal information that you provide to us such as:</p>
+            <ul>
+                <li><strong>Name and Email:</strong> When you subscribe to our newsletter or contact us</li>
+                <li><strong>Comments:</strong> When you post comments on our community page</li>
+                <li><strong>Messages:</strong> When you contact us through our contact form</li>
+            </ul>
+            
+            <h3>2.2 Automatically Collected Information</h3>
+            <p>When you visit our Website, we automatically collect certain information about your device, including:</p>
+            <ul>
+                <li>IP address and location data</li>
+                <li>Browser and device characteristics</li>
+                <li>Operating system</li>
+                <li>Referring URLs</li>
+                <li>Pages viewed and time spent</li>
+            </ul>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use personal information collected via our Website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.</p>
+            
+            <ul>
+                <li><strong>To send you marketing and promotional communications:</strong> We may use the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences.</li>
+                <li><strong>To post testimonials:</strong> We post testimonials on our Website that may contain personal information.</li>
+                <li><strong>To protect our Services:</strong> We may use your information as part of our efforts to keep our Website safe and secure.</li>
+                <li><strong>To respond to user inquiries/offer support:</strong> We may use your information to respond to your inquiries and solve any potential issues you might have with the use of our Services.</li>
+            </ul>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>4. Cookies and Tracking Technologies</h2>
+            <p>We may use cookies and similar tracking technologies to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Policy below.</p>
+            
+            <h3>Types of Cookies We Use</h3>
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="cookie-type cookie-necessary">Necessary</span></td>
+                        <td>Essential for website functionality</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-type cookie-analytics">Analytics</span></td>
+                        <td>Help us understand how visitors interact</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><span class="cookie-type cookie-functional">Functional</span></td>
+                        <td>Remember your preferences</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="security-box">
+                <p><strong>Cookie Control:</strong> Most web browsers are set to accept cookies by default. You can usually choose to set your browser to remove or reject browser cookies. Please note that if you choose to remove or reject cookies, this could affect the availability and functionality of our Website.</p>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>5. Information Sharing</h2>
+            <p>We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations.</p>
+            
+            <h3>We may share your data with:</h3>
+            <ul>
+                <li><strong>Service Providers:</strong> We may share your data with third-party vendors, service providers, contractors or agents who perform services for us.</li>
+                <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose your information where we are legally required to do so.</li>
+            </ul>
+            
+            <div class="warning-box">
+                <p><strong>Important:</strong> We do NOT sell your personal information to third parties.</p>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>6. Data Security</h2>
+            <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure.</p>
+            
+            <div class="security-box">
+                <p><strong>Security Measures:</strong> We use encryption (SSL), secure servers, and regular security audits to protect your data.</p>
+            </div>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>7. Your Privacy Rights</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+            
+            <ul>
+                <li><strong>Access:</strong> Request access to your personal information</li>
+                <li><strong>Correction:</strong> Request correction of your personal information</li>
+                <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+                <li><strong>Opt-Out:</strong> Opt-out of marketing communications</li>
+                <li><strong>Data Portability:</strong> Request transfer of your data</li>
+            </ul>
+            
+            <p>To make such a request, please use the contact details provided below. We will respond to your request within 30 days.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>8. Children's Privacy</h2>
+            <p>Our Website does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+            
+            <p>If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>9. Updates to This Policy</h2>
+            <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Revised" date and the updated version will be effective as soon as it is accessible.</p>
+            
+            <p>We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>
+        </div>
+        
+        <div class="privacy-section">
+            <h2>10. Contact Us</h2>
+            <p>If you have questions or comments about this policy, you may contact us:</p>
+            
+            <div class="contact-box">
+                <ul>
+                    <li><strong>Email:</strong> privacy@maxrblxmodels.com</li>
+                    <li><strong>Contact Form:</strong> <a href="contact.html">Contact Us page</a></li>
+                    <li><strong>Discord:</strong> Join our community server for support</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="last-updated">
+            <p><strong>Last Updated:</strong> December 1, 2024</p>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. <a href="pricety.html">Learn more</a></p>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn-secondary" id="cookieReject">Reject All</button>
+                <button class="btn-primary" id="cookieAccept">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-cube"></i>
+                        <span>Max's Rblx Models</span>
+                    </a>
+                    <p>Creating amazing Roblox models for developers worldwide</p>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@max-yt2025" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="store.html">Store</a>
+                    <a href="community.html">Community</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="tos.html">Terms of Service</a>
+                    <a href="pricety.html">Privacy Policy</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="https://youtube.com/@max-yt2025" target="_blank">Tutorials</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get notified about new models</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Max's Rblx Models. All rights reserved. Roblox is a trademark of Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cookie Consent Banner
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            const cookieAccept = document.getElementById('cookieAccept');
+            const cookieReject = document.getElementById('cookieReject');
+            
+            // Check if user has already made a choice
+            const cookieChoice = localStorage.getItem('cookieConsent');
+            
+            if (!cookieChoice) {
+                // Show banner after 2 seconds
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 2000);
+            }
+            
+            // Accept cookies
+            cookieAccept.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieConsent.style.display = 'none';
+                
+                // Here you would initialize your analytics/tracking scripts
+                console.log('Cookies accepted');
+            });
+            
+            // Reject cookies
+            cookieReject.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'rejected');
+                cookieConsent.style.display = 'none';
+                
+                // Here you would disable non-essential cookies
+                console.log('Cookies rejected');
+            });
+            
+            // Remove banner when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.cookie-consent') && !e.target.closest('#cookieAccept') && !e.target.closest('#cookieReject')) {
+                    if (cookieConsent.style.display === 'block' && !localStorage.getItem('cookieConsent')) {
+                        cookieConsent.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
